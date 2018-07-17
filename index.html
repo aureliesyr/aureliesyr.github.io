@@ -1,0 +1,164 @@
+<html>
+<body>
+
+<head>
+  <title>ASYR's Website</title>
+</head>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 120%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+#Home {background-color: #7B7D7D;}
+#MyFaves {background-color: #979A9A;}
+#Contact {background-color: #B3B6B7;}
+#About {background-color: #D0D3D4;}
+#Biography {
+    background-color: lightblue;
+    color: blueviolet;
+    padding: 40px;
+    text-align: center;
+}
+</style>
+</head>
+
+
+
+<button class="tablink" onclick="openPage('Home', this, 'red')"id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('MyFaves', this, 'green')" >My Faves</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+
+  <center><h1>A's life!</h1></center>
+  <style>
+    h1{
+      color:Indigo
+    }
+  </style>
+  <div></div>
+
+  <p id="Biography" style="font-size:115%;"> I’m a rising junior who attends a
+    French school. I live with my parents and my sister in a small suburban village;
+    it’s the largest village in the world! This summer I have been attending a Girls
+    Who Code summer immersion program and preparing myself to take the ACT.
+    My favorite activities are discovering new places in Chicago, eating and
+    cooking,singing and listening to music, along with programming! Additionally,
+    I spend 50% of my day reading and I feel as if I cannot go a day without doing it!</p>
+  <div></div>
+
+  <center><img src="welcomepic.jpg" style="width:25%" alt="picture of sara"/> </center>
+
+</div>
+
+<div id="MyFaves" class="tabcontent">
+
+  <p>
+    <h2>My Main Favorites Table</h2>
+    <table>
+      <tr>
+        <td>Favorite food</td>
+        <td>Grilled Cheese Sandwiches</td>
+      </tr>
+      <tr>
+        <td>Favorite dish to cook</td>
+        <td>Mushroom Burgers</td>
+      </tr>
+      <tr>
+        <td>Favorite color</td>
+        <td>Olive green or Army green</td>
+      </tr>
+      <tr>
+        <td>Favorite shows</td>
+        <td>The Vampire Diaries, Grey's Anatomy, Friends & The Big Bang Theory</td>
+      </tr>
+      <tr>
+        <td>Favorite authors</td>
+        <td>Sarah Dessen, Jenny Han, Christopher Paolini, Rick Riordan</td>
+      </tr>
+      <tr>
+        <td>Favorite location</td>
+        <td>In front of the fridge wrapped in a blanket</td>
+      </tr>
+    </table>
+
+  </p>
+</div>
+
+<style>
+  td, th {
+    border: 2px solid Indigo;
+    text-align: left;
+    padding: 8px;
+    }
+
+  tr:nth-child(even) {
+    background-color: lightblue;
+    }
+  </style>
+
+<div id="Contact" class="tabcontent">
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.
+    <a href ="https://cnn.com">News</a></p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+
+h1 {
+  text-align:center;
+}
+
+#Biography {
+    background-color: lightblue;
+    color: blueviolet;
+    padding: 40px;
+    text-align: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 69%;
+}
+
+
+<link
+  rel="stylesheet" href="myStyles.css" link/>
